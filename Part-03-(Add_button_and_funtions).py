@@ -12,4 +12,11 @@ button1 = Button(root, text='Click Here', command=click, padx=5, pady=2, fg='blu
 # command = function name without ()
 button1.pack()
 
+def press(i):
+    label_2 = Label(root, text=5+i)
+    label_2.pack()
+
+button_2 = Button(root, text='5+7', command=Lambda: press(7) )
+button_2.pack()
+
 root.mainloop() # ending
