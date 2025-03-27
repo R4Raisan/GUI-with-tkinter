@@ -11,6 +11,8 @@ e.grid(row=0, column=0, columnspan=3, padx=5, pady=5)
 #e.insert(0, 'Enter the values') i don't like to use
 
 # process
+def clearf():
+    e.delete(0, END)
 
 # buttons with positions
 button0 = Button(root, text='0')
@@ -49,7 +51,7 @@ buttonadd.grid(row=5, column=1)
 buttonmns = Button(root, text='-')
 buttonmns.grid(row=5, column=2)
 
-buttonclr = Button(root, text='clear')
+buttonclr = Button(root, text='clear', command=clearf)
 buttonclr.grid(row=6, column=0)
 
 buttonans = Button(root, text='=')
