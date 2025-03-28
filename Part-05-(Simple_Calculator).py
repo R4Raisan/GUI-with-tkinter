@@ -16,9 +16,11 @@ i="" # full empty value to veriable
 # process
 def whats(i):
     i+=i
+    return i
 
-def whatsi():
-    e.insert(0, i)
+def result():
+    ans = eval(i)
+    e.insert(0, ans)
 
 def typing(t):
     et = e.get()
@@ -68,7 +70,7 @@ buttonmns.grid(row=5, column=2)
 buttonclr = Button(root, text='C', command=clearf, padx=20, pady=10)
 buttonclr.grid(row=6, column=0)
 
-buttonans = Button(root, text='=', command=whatsi, padx=58, pady=10)
+buttonans = Button(root, text='=', command=result, padx=58, pady=10)
 buttonans.grid(row=6, column=1, columnspan=2)
 
 root.mainloop()
