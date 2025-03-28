@@ -10,7 +10,11 @@ e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 #e.pack() use grids to simply design
 #e.insert(0, 'Enter the values') i don't like to use
 
+# eval() takes a string and evaluates it as a Python expression.
+
 # process
+def result(i):
+    print(i)
 
 def typing(t):
     et = e.get()
@@ -21,7 +25,7 @@ def clearf():
     e.delete(0, END)
     
 # buttons with positions
-button0 = Button(root, text='0', command=lambda: typing(0), padx=20, pady=10)
+button0 = Button(root, text='0', command=lambda: (typing(0), result(7)), padx=20, pady=10)
 button0.grid(row=2, column=0)
 
 button1 = Button(root, text='1', command=lambda: typing(1), padx=20, pady=10)
