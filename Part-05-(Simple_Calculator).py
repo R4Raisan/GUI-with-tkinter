@@ -14,13 +14,13 @@ e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 i="" # full empty value to veriable
 
 # process
-def whats(i):
-    i+=i
-    return i
+def whats(t):
+    global i
+    i = i+t
 
 def result():
     ans = eval(i)
-    e.insert(0, ans)
+    e.insert(0, str(ans))
 
 def typing(t):
     et = e.get()
