@@ -12,17 +12,22 @@ e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 # eval() # takes a string and evaluates it as a Python expression.
 i="" # full empty value to veriable
-
+nwvalv = 0 # used to, when we get answer and we enter number again, calculator format itself to solve next math
 
 # process
 def result():  # show the final result
     ans = eval(i)
     e.delete(0, END)
     e.insert(0, str(ans))
+    global nwvalv
+    nwvalv = 1
 
 def typing(t):
-    global i  # undate the i globally i for last result
+    global i, nwvalv  # undate the i globally i for last result
+    if nwvalv==1:
+        clearf()
     i = i+t
+    nwvalv = 0
     et = e.get()  # input box value handling
     e.delete(0, END)
     e.insert(0, et+str(t))
@@ -32,7 +37,7 @@ def clearf():  # totally clear the input box
     global i 
     i=""
     
-    
+
 # buttons with positions
 button0 = Button(root, text='0', command=lambda: (typing('0')), padx=20, pady=10)
 button0.grid(row=2, column=0)
