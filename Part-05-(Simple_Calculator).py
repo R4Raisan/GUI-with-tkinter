@@ -20,6 +20,7 @@ def whats(t):
 
 def result():
     ans = eval(i)
+    e.delete(0, END)
     e.insert(0, str(ans))
 
 def typing(t):
