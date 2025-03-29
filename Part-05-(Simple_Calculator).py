@@ -16,15 +16,16 @@ nwvalv = 0 # used to, when we get answer and we enter number again, calculator f
 
 # process
 def result():  # show the final result
+    global i, nwvalv
     ans = eval(i)
     e.delete(0, END)
     e.insert(0, str(ans))
-    global nwvalv
     nwvalv = 1
+    i = str(ans)
 
 def typing(t):
     global i, nwvalv  # undate the i globally i for last result
-    if nwvalv==1:
+    if nwvalv==1 and t!='+' and t!='-':
         clearf()
     i = i+t
     nwvalv = 0
