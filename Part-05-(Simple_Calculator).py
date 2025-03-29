@@ -13,18 +13,16 @@ e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 # eval() # takes a string and evaluates it as a Python expression.
 i="" # full empty value to veriable
 
-# process
 
+# process
 def result():  # show the final result
     ans = eval(i)
     e.delete(0, END)
     e.insert(0, str(ans))
 
 def typing(t):
-
     global i  # undate the i globally i for last result
     i = i+t
-
     et = e.get()  # input box value handling
     e.delete(0, END)
     e.insert(0, et+str(t))
@@ -33,6 +31,7 @@ def clearf():  # totally clear the input box
     e.delete(0, END)
     global i 
     i=""
+    
     
 # buttons with positions
 button0 = Button(root, text='0', command=lambda: (typing('0')), padx=20, pady=10)
