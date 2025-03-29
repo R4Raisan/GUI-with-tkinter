@@ -30,6 +30,8 @@ def typing(t):
 
 def clearf():
     e.delete(0, END)
+    global i
+    i=""
     
 # buttons with positions
 button0 = Button(root, text='0', command=lambda: (typing(0), whats('0')), padx=20, pady=10)
