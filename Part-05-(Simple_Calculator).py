@@ -25,7 +25,7 @@ def result():  # show the final result
 
 def typing(t):
     global i, nwvalv  # undate the i globally i for last result
-    if nwvalv==1 and t!='+' and t!='-':
+    if nwvalv==1 and t!='+' and t!='-' and t!='*' and t!='/':
         clearf()
     i = i+t
     nwvalv = 0
