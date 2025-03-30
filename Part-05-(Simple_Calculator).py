@@ -13,20 +13,27 @@ e.grid(row=0, column=0, columnspan=4, padx=2, pady=3)
 # eval() # takes a string and evaluates it as a Python expression.
 i="" # full empty value to veriable
 nwvalv = 0 # used to, when we get answer and we enter number again, calculator format itself to solve next math
+err = 0
 
 # process
 def result():  # show the final result
-    global i, nwvalv
-    ans = eval(i)
+    global i, nwvalv, err
+    try:
+        ans = eval(i)
+    except (ZeroDivisionError, SyntaxError):
+        ans = 'Error'
+        err = 1
     e.delete(0, END)
     e.insert(0, str(ans))
     nwvalv = 1
     i = str(ans)
 
+
 def typing(t):
-    global i, nwvalv  # undate the i globally i for last result
-    if nwvalv==1 and t!='+' and t!='-' and t!='*' and t!='/':
+    global i, nwvalv, err  # undate the i globally i for last result
+    if nwvalv==1 and t!='+' and t!='-' and t!='*' and t!='/' or err==1:
         clearf()
+        err=0
     i = i+t
     nwvalv = 0
     et = e.get()  # input box value handling
