@@ -6,7 +6,7 @@ root = Tk()
 root.title('I am the title')
 
 e = Entry(root, width=35, borderwidth=5)
-e.grid(row=0, column=0, columnspan=4, padx=10)
+e.grid(row=0, column=0, columnspan=4, padx=2, pady=3)
 #e.pack() use grids to simply design
 #e.insert(0, 'Enter the values') i don't like to use
 
@@ -33,9 +33,19 @@ def typing(t):
     e.delete(0, END)
     e.insert(0, et+str(t))
 
-def clearf():  # totally clear the input box
+def backspace():
+    global i
     e.delete(0, END)
-    global i 
+    if len(i)<2:
+        i="" 
+    else:
+        i=i[:-1]
+        e.insert(0, i)
+
+
+def clearf():  # totally clear the input box
+    global i
+    e.delete(0, END)   
     i=""
     
 
