@@ -83,25 +83,25 @@ button9.grid(row=3, column=1)
 buttonclr = Button(root, text='C', command=clearf, padx=19, pady=10)
 buttonclr.grid(row=3, column=2
                )
-buttondel = Button(root, text='D', command=clearf, padx=19, pady=10)
+buttondel = Button(root, text='⌫', command=backspace, padx=16, pady=10)
 buttondel.grid(row=3, column=3)
 
-buttonmlt = Button(root, text='*', command=lambda: (typing('*')), padx=20, pady=10)
+buttonmlt = Button(root, text='*', command=lambda: (typing('*')), padx=21, pady=10)
 buttonmlt.grid(row=4, column=0)
 
 buttondiv = Button(root, text='/', command=lambda: (typing('/')), padx=20, pady=10)
 buttondiv.grid(row=4, column=1)
 
-buttonadd = Button(root, text='+', command=lambda: (typing('+')), padx=20, pady=10)
+buttonadd = Button(root, text='+', command=lambda: (typing('+')), padx=19, pady=10)
 buttonadd.grid(row=4, column=2)
 
-buttonmns = Button(root, text='-', command=lambda: (typing('-')), padx=20, pady=10)
+buttonmns = Button(root, text='-', command=lambda: (typing('-')), padx=21, pady=10)
 buttonmns.grid(row=4, column=3)
 
-buttondot = Button(root, text='.', command=lambda: (typing('.')), padx=20, pady=10)
+buttondot = Button(root, text='.', command=lambda: (typing('.')), padx=22, pady=10)
 buttondot.grid(row=5, column=0)
 
-buttoneql = Button(root, text='=', command=result, padx=60, pady=10)
+buttoneql = Button(root, text='=', command=result, padx=75, pady=10)
 buttoneql.grid(row=5, column=1, columnspan=3)
 
 root.mainloop()
