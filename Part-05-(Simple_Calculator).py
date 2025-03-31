@@ -3,7 +3,7 @@ from tkinter import *
 root = Tk()
 
 # .title(), like the window name in the close button row
-root.title('I am the title')
+root.title('Cal : )')
 
 e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=4, padx=2, pady=3)
@@ -20,18 +20,18 @@ def result():  # show the final result
     global i, nwvalv, err
     try:
         ans = eval(i)
-        if str(ans)[-2]=='.' and str(ans)[-1]=='0':
+        if type(ans)==float and str(ans)[-2]=='.' and str(ans)[-1]=='0':  # fix floats repeat after /
             ans = int(ans)
-    except (ZeroDivisionError, SyntaxError):
+    except (ZeroDivisionError, SyntaxError):  # handle zero division error and syntax errors
         ans = 'Error'
         err = 1
     e.delete(0, END)
-    e.insert(0, str(ans))
+    e.insert(0, str(ans))  # insert the answer to I/O box
     nwvalv = 1
-    i = str(ans)
+    i = str(ans)  # handle if the answer require to further processes
 
 
-def typing(t):
+def typing(t):  # hadles what's typing from the GUI
     global i, nwvalv, err  # undate the i globally i for last result
     if nwvalv==1 and t!='+' and t!='-' and t!='*' and t!='/' or err==1:
         clearf()
@@ -42,10 +42,10 @@ def typing(t):
     e.delete(0, END)
     e.insert(0, et+str(t))
 
-def backspace():
+def backspace():  # handle Backspace requests
     global i
     e.delete(0, END)
-    if len(i)<2:
+    if len(i)<2:  # fix empty backspace errors
         i="" 
     else:
         i=i[:-1]
