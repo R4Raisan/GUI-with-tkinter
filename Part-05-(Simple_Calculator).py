@@ -19,6 +19,8 @@ err = 0
 def result():  # show the final result
     global i, nwvalv, err
     try:
+        while i[0]=='0':  # fix pre 0 error
+            i=i[1:]
         ans = eval(i)
         if type(ans)==float and str(ans)[-2]=='.' and str(ans)[-1]=='0':  # fix floats repeat after /
             ans = int(ans)
