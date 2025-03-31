@@ -20,6 +20,8 @@ def result():  # show the final result
     global i, nwvalv, err
     try:
         ans = eval(i)
+        if str(ans)[-2]=='.' and str(ans)[-1]=='0':
+            ans = int(ans)
     except (ZeroDivisionError, SyntaxError):
         ans = 'Error'
         err = 1
