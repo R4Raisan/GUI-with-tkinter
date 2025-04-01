@@ -94,10 +94,10 @@ button9.grid(row=3, column=1)
 buttonclr = Button(root, text='AC', command=clearf, padx=16, pady=11.4, bg='#BF2626', font=('Helvetica', 9, 'bold'))
 buttonclr.grid(row=3, column=2
                )
-buttondel = Button(root, text='⌫', command=backspace, padx=12, pady=8, bg='#C45924', font=('Helvetica', 11, 'bold'))
+buttondel = Button(root, text='⌫', command=backspace, padx=16, pady=11, bg='#C45924', font=('Helvetica', 9, 'bold'))
 buttondel.grid(row=3, column=3)
 
-buttonmlt = Button(root, text='*', command=lambda: (typing('*')), padx=16,pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
+buttonmlt = Button(root, text='*', command=lambda: (typing('*')), padx=17,pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
 buttonmlt.grid(row=4, column=0)
 
 buttondiv = Button(root, text='/', command=lambda: (typing('/')), padx=17.5, pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
