@@ -5,8 +5,8 @@ root = Tk()
 # .title(), like the window name in the close button row
 root.title('Cal : )')
 
-e = Entry(root, width=35, borderwidth=5)
-e.grid(row=0, column=0, columnspan=4, padx=2, pady=3)
+e = Entry(root, width=20, borderwidth=5, font=('Courier', 12, 'bold'))
+e.grid(row=0, column=0, columnspan=4, padx=2, pady=5)
 #e.pack() use grids to simply design
 #e.insert(0, 'Enter the values') i don't like to use
 
