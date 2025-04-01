@@ -109,10 +109,10 @@ buttonadd.grid(row=4, column=2)
 buttonmns = Button(root, text='-', command=lambda: (typing('-')), padx=17, pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
 buttonmns.grid(row=4, column=3)
 
-buttondot = Button(root, text='.', command=lambda: (typing('.')), padx=21, pady=10, bg='#FFDE21', font=('Helvetica', 10, 'bold'))
+buttondot = Button(root, text='.', command=lambda: (typing('.')), padx=18, pady=5, bg='#FFDE21', font=('Helvetica', 14, 'bold'))
 buttondot.grid(row=5, column=0)
 
-buttoneql = Button(root, text='=', command=result, padx=72, pady=3, bg='#1DA80E', font=('Helvetica', 15, 'bold'))
+buttoneql = Button(root, text='=', command=result, padx=73, pady=5, bg='#1DA80E', font=('Helvetica', 14, 'bold'))
 buttoneql.grid(row=5, column=1, columnspan=3)
 
 root.mainloop()
