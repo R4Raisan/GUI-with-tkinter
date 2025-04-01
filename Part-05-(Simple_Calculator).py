@@ -91,28 +91,28 @@ button8.grid(row=3, column=0)
 button9 = Button(root, text='9', command=lambda: (typing('9')), padx=20, pady=10, bg='#FFDE21', font=('Helvetica', 10, 'bold'))
 button9.grid(row=3, column=1)
 
-buttonclr = Button(root, text='AC', command=clearf, padx=16, pady=11.4, font=('Helvetica', 9, 'bold'))
+buttonclr = Button(root, text='AC', command=clearf, padx=16, pady=11.4, bg='#BF2626', font=('Helvetica', 9, 'bold'))
 buttonclr.grid(row=3, column=2
                )
-buttondel = Button(root, text='⌫', command=backspace, padx=12, pady=8, font=('Helvetica', 11, 'bold'))
+buttondel = Button(root, text='⌫', command=backspace, padx=12, pady=8, bg='#C45924', font=('Helvetica', 11, 'bold'))
 buttondel.grid(row=3, column=3)
 
-buttonmlt = Button(root, text='*', command=lambda: (typing('*')), padx=16, pady=3, font=('Helvetica', 15, 'bold'))
+buttonmlt = Button(root, text='*', command=lambda: (typing('*')), padx=16,pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
 buttonmlt.grid(row=4, column=0)
 
-buttondiv = Button(root, text='/', command=lambda: (typing('/')), padx=16, pady=3, font=('Helvetica', 15, 'bold'))
+buttondiv = Button(root, text='/', command=lambda: (typing('/')), padx=17.5, pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
 buttondiv.grid(row=4, column=1)
 
-buttonadd = Button(root, text='+', command=lambda: (typing('+')), padx=16, pady=3, font=('Helvetica', 15, 'bold'))
+buttonadd = Button(root, text='+', command=lambda: (typing('+')), padx=14.5, pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
 buttonadd.grid(row=4, column=2)
 
-buttonmns = Button(root, text='-', command=lambda: (typing('-')), padx=16, pady=3, font=('Helvetica', 15, 'bold'))
+buttonmns = Button(root, text='-', command=lambda: (typing('-')), padx=17, pady=3, bg='#0060BF', font=('Helvetica', 15, 'bold'))
 buttonmns.grid(row=4, column=3)
 
-buttondot = Button(root, text='.', command=lambda: (typing('.')), padx=22, pady=10, font=('Helvetica', 10, 'bold'))
+buttondot = Button(root, text='.', command=lambda: (typing('.')), padx=21, pady=10, bg='#FFDE21', font=('Helvetica', 10, 'bold'))
 buttondot.grid(row=5, column=0)
 
-buttoneql = Button(root, text='=', command=result, padx=75, pady=10, font=('Helvetica', 10, 'bold'))
+buttoneql = Button(root, text='=', command=result, padx=72, pady=3, bg='#1DA80E', font=('Helvetica', 15, 'bold'))
 buttoneql.grid(row=5, column=1, columnspan=3)
 
 root.mainloop()
