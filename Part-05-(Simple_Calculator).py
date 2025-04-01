@@ -116,3 +116,26 @@ buttoneql = Button(root, text='=', command=result, padx=73, pady=5, bg='#1DA80E'
 buttoneql.grid(row=5, column=1, columnspan=3)
 
 root.mainloop()
+
+
+# Buttons - Extra Simple way to code the button positions 
+'''
+buttons = [('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('/', 1, 3),
+            ('4', 2, 0), ('5', 2, 1), ('6', 2, 2), ('*', 2, 3),
+            ('1', 3, 0), ('2', 3, 1), ('3', 3, 2), ('-', 3, 3),
+            ('C', 4, 0), ('0', 4, 1), ('=', 4, 2), ('+', 4, 3),
+            ('AC', 5, 0), ('⌫', 5, 1)]
+
+for (text, row, col) in buttons:
+	if text == "=":
+		btn = tk.Button(self.root, text=text, width=5, height=2,command=self.calculate)
+	elif text == "C":
+		btn = tk.Button(self.root, text=text, width=5, height=2, command=self.clear_last)
+	elif text == "AC":
+		btn = tk.Button(self.root, text=text, width=5, height=2, command=self.clear_all)
+	elif text == "⌫":
+		btn = tk.Button(self.root, text=text, width=5, height=2, command=self.backspace)
+	else:
+		btn = tk.Button(self.root, text=text, width=5, height=2, command=lambda t=text: self.add_to_entry(t))
+	btn.grid(row=row, column=col, padx=5, pady=5)
+'''
