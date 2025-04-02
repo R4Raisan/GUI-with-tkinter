@@ -42,7 +42,10 @@ def typing(t):  # hadles what's typing from the GUI
     nwvalv = 0
     et = e.get()  # input box value handling
     e.delete(0, END)
-    e.insert(0, et+str(t))
+    if len(et+str(t))>20:
+        e.insert(0, et[1:]+str(t))
+    else:
+        e.insert(0, et+str(t))
 
 def backspace():  # handle Backspace requests
     global i
