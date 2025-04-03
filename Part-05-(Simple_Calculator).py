@@ -1,4 +1,5 @@
 from tkinter import *
+import math
 
 root = Tk()
 
@@ -20,7 +21,7 @@ def result():  # show the final result
     global i, nwvalv, err
     try:
         while i[0]=='0':  # fix pre 0 error
-            i=i[1:]
+            i=i[1:]   # floats are protected by the '.', all pre )s removed
         ans = eval(i)
         if type(ans)==float and str(ans)[-2]=='.' and str(ans)[-1]=='0':  # fix floats repeat after /
             ans = int(ans)
@@ -28,7 +29,12 @@ def result():  # show the final result
         ans = 'Error'
         err = 1
     e.delete(0, END)
-    e.insert(0, str(ans))  # insert the answer to I/O box
+    if len(str(ans))>20:
+        b = math.floor(math.log10(abs(ans)))  # Find exponent
+        a = ans / (10**b)  # Normalize number to scientific notation
+        e.insert(0, f'{a:.12f}×10^{b}')
+    else:
+        e.insert(0, str(ans))  # insert the answer to I/O box
     nwvalv = 1
     i = str(ans)  # handle if the answer require to further processes
 
