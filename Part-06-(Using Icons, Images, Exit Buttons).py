@@ -14,7 +14,10 @@ imglabel1 = Label(image=img1)
 imglabel1.pack()
 
 # add Exit button for Exit from the whole program
-exitbutton = Button(root, text=">> Exit Here <<", command=root.quit, fg='red', font=('bold, 20'))
+exitbutton = Button(root, text=">> Exit Here <<", command=root.quit, fg='red', font=('Arial', 20, 'bold'))
 exitbutton.pack(pady=5)
+
+# special note,
+# font edit structure must be: font=('style',size,'bold')
 
 root.mainloop()
