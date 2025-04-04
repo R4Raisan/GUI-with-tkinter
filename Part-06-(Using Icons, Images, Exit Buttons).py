@@ -13,4 +13,8 @@ img1 = ImageTk.PhotoImage(Image.open('Part-06-(Image).png'))
 imglabel1 = Label(image=img1)
 imglabel1.pack()
 
+# add Exit button for Exit from the whole program
+exitbutton = Button(root, text=">> Exit Here <<", command=root.quit)
+exitbutton.pack()
+
 root.mainloop()
